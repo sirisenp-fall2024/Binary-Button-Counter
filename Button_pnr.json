@@ -1,0 +1,4396 @@
+{
+  "creator": "Next Generation Place and Route (Version nextpnr-0.7-131-g9c2d96f8)",
+  "modules": {
+    "top": {
+      "settings": {
+        "route": "00000000000000000000000000000001",
+        "router/tmg_ripup": "0 ",
+        "router1/useEstimate": "1 ",
+        "router1/fullCleanupReroute": "1 ",
+        "router1/cleanupReroute": "1 ",
+        "router1/maxIterCnt": "200",
+        "place": "00000000000000000000000000000001",
+        "placer1/startTemp": "1.000000",
+        "placer1/minBelsForGridPick": "64",
+        "placer1/netShareWeight": "0.000000",
+        "placer1/constraintWeight": "10.000000",
+        "placerHeap/cellPlacementTimeout": "8",
+        "placerHeap/netShareWeight": "0.000000",
+        "placerHeap/parallelRefine": "0 ",
+        "pack": "00000000000000000000000000000001",
+        "synth": "00000000000000000000000000000001",
+        "placerHeap/timingWeight": "10 ",
+        "placerHeap/criticalityExponent": "2",
+        "placerHeap/beta": "0.900000",
+        "placerHeap/alpha": "0.100000",
+        "seed": "0011000101000001010110010010011001010011010110001001011110010011",
+        "arch.type": " ",
+        "arch.name": "ARCHNAME",
+        "router": "router1",
+        "placer": "heap",
+        "auto_freq": "00000000000000000000000000000000",
+        "slack_redist_iter": "00000000000000000000000000000000",
+        "timing_driven": "00000000000000000000000000000001",
+        "target_freq": "27000000.000000",
+        "cst.filename": "d:\\FPGA\\Button\\counter2.cst",
+        "packer.partno": "GW1NR-LV9QN88PC6/I5",
+        "packer.chipdb": "GW1N-9C",
+        "packer.arch": "himbaechel/gowin"
+      },
+      "attributes": {
+        "top": "00000000000000000000000000000001",
+        "src": "d:\\FPGA\\Button\\counter2.v:1.1-63.10"
+      },
+      "ports": {
+        "resetn": {
+          "direction": "input",
+          "bits": [ 7573 ]
+        },
+        "led": {
+          "direction": "output",
+          "bits": [ 7818, 7815, 7812, 7809, 7806, 7803 ]
+        },
+        "clk": {
+          "direction": "input",
+          "bits": [ 7571 ]
+        },
+        "btn1": {
+          "direction": "input",
+          "bits": [ 7570 ]
+        }
+      },
+      "cells": {
+        "btn1_sync0_DFFC_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X4Y13/LUT0"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7926 ],
+            "I3": [ 7576 ]
+          }
+        },
+        "btn1_sync1_DFFC_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X4Y13/LUT4"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7924 ],
+            "I3": [ 7581 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X2Y14/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7922 ],
+            "I3": [ 7585 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X2Y16/LUT4"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7920 ],
+            "I3": [ 7831 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_CE_LUT2_F_I0_DFFC_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X4Y16/LUT3"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7918 ],
+            "I3": [ 7608 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_DFFCE_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X3Y17/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7916 ],
+            "I3": [ 7846 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1_I1_DFFCE_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X1Y17/LUT5"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7914 ],
+            "I3": [ 7857 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_I1_DFFCE_Q_passthrough_lut$": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "00000000000000001111111100000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X3Y17/LUT4"
+          },
+          "port_directions": {
+            "F": "output",
+            "I3": "input"
+          },
+          "connections": {
+            "F": [ 7912 ],
+            "I3": [ 7853 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_DUMMY_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y15/ALU3"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_3_HEAD_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y15/ALU0"
+          },
+          "port_directions": {
+            "I2": "input",
+            "COUT": "output"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "COUT": [ 7899 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_DUMMY_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y17/ALU1"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_HEAD_ALULC": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "C2L"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/ALU0"
+          },
+          "port_directions": {
+            "I2": "input",
+            "COUT": "output"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "COUT": [ 7897 ]
+          }
+        },
+        "GSR": {
+          "hide_name": 0,
+          "type": "GSR",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/GSR"
+          },
+          "port_directions": {
+            "GSRI": "input"
+          },
+          "connections": {
+            "GSRI": [ 7892 ]
+          }
+        },
+        "resetn_IBUF_I_O_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y25/LUT6",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7874 ],
+            "F": [ 7579 ]
+          }
+        },
+        "resetn_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X28Y28/IOBB",
+            "src": "d:\\FPGA\\Button\\counter2.v:3.16-3.22",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7874 ],
+            "I": [ 7573 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_I1_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y19/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7852 ],
+            "F": [ 7820 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_I1_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y17/DFF4",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7852 ],
+            "D": [ 7912 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_3_I1_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7867 ],
+            "F": [ 7826 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_3_I1_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/DFF3",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7867 ],
+            "D": [ 7868 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_3": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/ALU3",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7868 ],
+            "I3": [ 7892 ],
+            "I1": [ 7867 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7861 ],
+            "CIN": [ 7844 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_2_I1_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7862 ],
+            "F": [ 7824 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_2_I1_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/DFF4",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7862 ],
+            "D": [ 7863 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_2": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/ALU4",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7863 ],
+            "I3": [ 7892 ],
+            "I1": [ 7862 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7855 ],
+            "CIN": [ 7861 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1_I1_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y19/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7856 ],
+            "F": [ 7822 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1_I1_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/DFF5",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7856 ],
+            "D": [ 7914 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/ALU5",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7857 ],
+            "I3": [ 7892 ],
+            "I1": [ 7856 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7850 ],
+            "CIN": [ 7855 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y17/ALU0",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7853 ],
+            "I3": [ 7892 ],
+            "I1": [ 7852 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7851 ],
+            "CIN": [ 7850 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_LUT1_I0": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/LUT2",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7845 ],
+            "F": [ 7828 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y17/DFF5",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7845 ],
+            "D": [ 7916 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/ALU2",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7846 ],
+            "I3": [ 7892 ],
+            "I1": [ 7845 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7844 ],
+            "CIN": [ 7841 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y17/ALU1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7842 ],
+            "I3": [ 7892 ],
+            "I1": [ 7835 ],
+            "I0": [ 7892 ],
+            "COUT": [ 7841 ],
+            "CIN": [ 7897 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "01"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y16/LUT2",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:135.23-136.15",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [ 7835 ],
+            "F": [ 7831 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_CE_LUT2_F_I0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y16/DFF3",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7837 ],
+            "D": [ 7918 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_CE_LUT2_F": {
+          "hide_name": 0,
+          "type": "LUT2",
+          "parameters": {
+            "INIT": "0100"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y16/LUT6",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:139.23-140.26",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I1": [ 7608 ],
+            "I0": [ 7837 ],
+            "F": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/DFF4",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7835 ],
+            "D": [ 7920 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7834 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y16/DFF2",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7817 ],
+            "D": [ 7831 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_4": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/DFF2",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7814 ],
+            "D": [ 7828 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_3": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7811 ],
+            "D": [ 7826 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y17/DFF1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7808 ],
+            "D": [ 7824 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y19/DFF1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7805 ],
+            "D": [ 7822 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y19/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7802 ],
+            "D": [ 7820 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "led_OBUF_O_5": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y14/IOBA",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7818 ],
+            "I": [ 7817 ]
+          }
+        },
+        "led_OBUF_O_4": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y15/IOBB",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7815 ],
+            "I": [ 7814 ]
+          }
+        },
+        "led_OBUF_O_3": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y20/IOBB",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7812 ],
+            "I": [ 7811 ]
+          }
+        },
+        "led_OBUF_O_2": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y21/IOBB",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7809 ],
+            "I": [ 7808 ]
+          }
+        },
+        "led_OBUF_O_1": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y24/IOBB",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7806 ],
+            "I": [ 7805 ]
+          }
+        },
+        "led_OBUF_O": {
+          "hide_name": 0,
+          "type": "OBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y25/IOBB",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25",
+            "&DRIVE=8": "00000000000000000000000000000001",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7803 ],
+            "I": [ 7802 ]
+          }
+        },
+        "$PACKER_VCC_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_VCC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/VCC"
+          },
+          "port_directions": {
+            "V": "output"
+          },
+          "connections": {
+            "V": [ 7892 ]
+          }
+        },
+        "clk_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X46Y16/IOBA",
+            "src": "d:\\FPGA\\Button\\counter2.v:2.11-2.14",
+            "&IO_TYPE=LVCMOS33": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7580 ],
+            "I": [ 7571 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0_DFFC_Q_3": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/DFF3",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7754 ],
+            "D": [ 7631 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/DFF2",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7705 ],
+            "D": [ 7606 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7678 ],
+            "D": [ 7674 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y16/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7671 ],
+            "D": [ 7655 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/LUT7",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7754 ],
+            "I2": [ 7705 ],
+            "I1": [ 7678 ],
+            "I0": [ 7671 ],
+            "F": [ 7776 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_DFFC_Q_3": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/DFF3",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7782 ],
+            "D": [ 7652 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/DFF4",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7781 ],
+            "D": [ 7649 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/DFF1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7780 ],
+            "D": [ 7646 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/DFF2",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7779 ],
+            "D": [ 7643 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_3": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y15/ALU1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7653 ],
+            "I3": [ 7892 ],
+            "I1": [ 7782 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7788 ],
+            "CIN": [ 7659 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_2": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y15/ALU2",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7650 ],
+            "I3": [ 7892 ],
+            "I1": [ 7781 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7786 ],
+            "CIN": [ 7788 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y15/ALU3",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7647 ],
+            "I3": [ 7892 ],
+            "I1": [ 7780 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7784 ],
+            "CIN": [ 7786 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y15/ALU4",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7644 ],
+            "I3": [ 7892 ],
+            "I1": [ 7779 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7729 ],
+            "CIN": [ 7784 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I1_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:153.41-153.66|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7782 ],
+            "I2": [ 7781 ],
+            "I1": [ 7780 ],
+            "I0": [ 7779 ],
+            "F": [ 7775 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I0_LUT1_F": {
+          "hide_name": 0,
+          "type": "LUT1",
+          "parameters": {
+            "INIT": "00"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:152.41-152.66|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I0": [  ],
+            "F": [ 7774 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O": {
+          "hide_name": 0,
+          "type": "MUX2_LUT5",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/MUX0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:154.14-154.54",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "S0": "input",
+            "O": "output",
+            "I1": "input",
+            "I0": "input"
+          },
+          "connections": {
+            "S0": [ 7776 ],
+            "O": [ 7712 ],
+            "I1": [ 7775 ],
+            "I0": [ 7774 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_LUT3_I2": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "00000110"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7738 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7771 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_DFFC_Q_3": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7738 ],
+            "D": [ 7771 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/DFF1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7737 ],
+            "D": [ 7698 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/DFF3",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7736 ],
+            "D": [ 7695 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/DFF2",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7735 ],
+            "D": [ 7692 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_3": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y15/ALU1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7766 ],
+            "I3": [ 7892 ],
+            "I1": [ 7738 ],
+            "I0": [ 7892 ],
+            "COUT": [ 7764 ],
+            "CIN": [ 7899 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_2": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y15/ALU2",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7699 ],
+            "I3": [ 7892 ],
+            "I1": [ 7737 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7762 ],
+            "CIN": [ 7764 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y15/ALU3",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7696 ],
+            "I3": [ 7892 ],
+            "I1": [ 7736 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7760 ],
+            "CIN": [ 7762 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y15/ALU4",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7693 ],
+            "I3": [ 7892 ],
+            "I1": [ 7735 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7752 ],
+            "CIN": [ 7760 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_DFFC_Q_3": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/DFF3",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7743 ],
+            "D": [ 7689 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/DFF1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7742 ],
+            "D": [ 7686 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y13/DFF4",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7741 ],
+            "D": [ 7683 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/DFF5",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7740 ],
+            "D": [ 7680 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_COUT_ALU_CIN": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y15/ALU3",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7632 ],
+            "I3": [ 7892 ],
+            "I1": [ 7754 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7704 ],
+            "CIN": [ 7746 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_3": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y15/ALU5",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7690 ],
+            "I3": [ 7892 ],
+            "I1": [ 7743 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7750 ],
+            "CIN": [ 7752 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_2": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y15/ALU0",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7687 ],
+            "I3": [ 7892 ],
+            "I1": [ 7742 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7748 ],
+            "CIN": [ 7750 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y15/ALU1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7684 ],
+            "I3": [ 7892 ],
+            "I1": [ 7741 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7745 ],
+            "CIN": [ 7748 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y15/ALU2",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7681 ],
+            "I3": [ 7892 ],
+            "I1": [ 7740 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7746 ],
+            "CIN": [ 7745 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/LUT4",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7743 ],
+            "I2": [ 7742 ],
+            "I1": [ 7741 ],
+            "I0": [ 7740 ],
+            "F": [ 7711 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/LUT5",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7738 ],
+            "I2": [ 7737 ],
+            "I1": [ 7736 ],
+            "I0": [ 7735 ],
+            "F": [ 7710 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_DFFC_Q_3": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7720 ],
+            "D": [ 7640 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_DFFC_Q_2": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/DFF1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7719 ],
+            "D": [ 7637 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_DFFC_Q_1": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/DFF2",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7718 ],
+            "D": [ 7634 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7717 ],
+            "D": [ 7701 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_3": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y15/ALU5",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7641 ],
+            "I3": [ 7892 ],
+            "I1": [ 7720 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7727 ],
+            "CIN": [ 7729 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_2": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y15/ALU0",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7638 ],
+            "I3": [ 7892 ],
+            "I1": [ 7719 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7725 ],
+            "CIN": [ 7727 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y15/ALU1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7635 ],
+            "I3": [ 7892 ],
+            "I1": [ 7718 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7722 ],
+            "CIN": [ 7725 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y15/ALU2",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7702 ],
+            "I3": [ 7892 ],
+            "I1": [ 7717 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7723 ],
+            "CIN": [ 7722 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000001"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/LUT7",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7720 ],
+            "I2": [ 7719 ],
+            "I1": [ 7718 ],
+            "I0": [ 7717 ],
+            "F": [ 7715 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/LUT3",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7715 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7713 ]
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/LUT3",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:147.23-148.48",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I3": "input",
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I3": [ 7713 ],
+            "I2": [ 7712 ],
+            "I1": [ 7711 ],
+            "I0": [ 7710 ],
+            "F": [ 7708 ]
+          }
+        },
+        "btn_stable_DFFCE_Q": {
+          "hide_name": 0,
+          "type": "DFFCE",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/DFF5",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:115.8-115.68",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input",
+            "CE": "input"
+          },
+          "connections": {
+            "Q": [ 7608 ],
+            "D": [ 7922 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ],
+            "CE": [ 7708 ]
+          }
+        },
+        "$PACKER_GND_DRV": {
+          "hide_name": 1,
+          "type": "GOWIN_GND",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X0Y0/GND"
+          },
+          "port_directions": {
+            "G": "output"
+          },
+          "connections": {
+            "G": [ 7893 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_I2_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y15/ALU4",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7629 ],
+            "I3": [ 7892 ],
+            "I1": [ 7705 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7677 ],
+            "CIN": [ 7704 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_9": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7702 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7701 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_8": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7699 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7698 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_7": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/LUT3",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7696 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7695 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_6": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X1Y14/LUT2",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7693 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7692 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_5": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/LUT3",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7690 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7689 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_4": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7687 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7686 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_3": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y13/LUT4",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7684 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7683 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_2": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y13/LUT5",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7681 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7680 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_18_I2_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y15/ALU5",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7675 ],
+            "I3": [ 7892 ],
+            "I1": [ 7678 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7658 ],
+            "CIN": [ 7677 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_18": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7675 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7674 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_17_I2_ALU_SUM": {
+          "hide_name": 0,
+          "type": "ALU",
+          "parameters": {
+            "ALU_MODE": "00000000000000000000000000000010"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y15/ALU0",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "SUM": "output",
+            "I3": "input",
+            "I1": "input",
+            "I0": "input",
+            "COUT": "output",
+            "CIN": "input"
+          },
+          "connections": {
+            "I2": [ 7892 ],
+            "SUM": [ 7656 ],
+            "I3": [ 7892 ],
+            "I1": [ 7671 ],
+            "I0": [ 7893 ],
+            "COUT": [ 7659 ],
+            "CIN": [ 7658 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_17": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y16/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7656 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7655 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_16": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/LUT3",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7653 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7652 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_15": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/LUT4",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7650 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7649 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_14": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7647 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7646 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_13": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y14/LUT2",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7644 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7643 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_12": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X3Y14/LUT0",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7641 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7640 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_11": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/LUT1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7638 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7637 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_10": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y14/LUT2",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7635 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7634 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1_1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/LUT3",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7632 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7631 ]
+          }
+        },
+        "btn1_sync1_LUT3_I1": {
+          "hide_name": 0,
+          "type": "LUT3",
+          "parameters": {
+            "INIT": "01100000"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X2Y16/LUT2",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:143.23-144.37",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "I2": "input",
+            "I1": "input",
+            "I0": "input",
+            "F": "output"
+          },
+          "connections": {
+            "I2": [ 7629 ],
+            "I1": [ 7585 ],
+            "I0": [ 7608 ],
+            "F": [ 7606 ]
+          }
+        },
+        "btn1_sync1_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y13/DFF4",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7585 ],
+            "D": [ 7924 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn1_sync0_DFFC_Q": {
+          "hide_name": 0,
+          "type": "DFFC",
+          "parameters": {
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000001",
+            "NEXTPNR_BEL": "X4Y13/DFF0",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:91.7-91.59",
+            "module_not_derived": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "Q": "output",
+            "D": "input",
+            "CLK": "input",
+            "CLEAR": "input"
+          },
+          "connections": {
+            "Q": [ 7581 ],
+            "D": [ 7926 ],
+            "CLK": [ 7580 ],
+            "CLEAR": [ 7579 ]
+          }
+        },
+        "btn1_IBUF_I": {
+          "hide_name": 0,
+          "type": "IBUF",
+          "parameters": {
+            "NET_I": "NET",
+            "NET_O": "NET"
+          },
+          "attributes": {
+            "BEL_STRENGTH": "00000000000000000000000000000101",
+            "NEXTPNR_BEL": "X0Y4/IOBA",
+            "src": "d:\\FPGA\\Button\\counter2.v:4.16-4.20",
+            "&IO_TYPE=LVCMOS18": "00000000000000000000000000000001",
+            "&PULL_MODE=UP": "00000000000000000000000000000001",
+            "keep": "00000000000000000000000000000001"
+          },
+          "port_directions": {
+            "O": "output",
+            "I": "input"
+          },
+          "connections": {
+            "O": [ 7576 ],
+            "I": [ 7570 ]
+          }
+        }
+      },
+      "netnames": {
+        "btn1_sync0_DFFC_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7926 ] ,
+          "attributes": {
+            "ROUTING": "X4Y13/F0;;1;X4Y13/XD0;X4Y13/XD0/F0;1"
+          }
+        },
+        "btn1_sync1_DFFC_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7924 ] ,
+          "attributes": {
+            "ROUTING": "X4Y13/F4;;1;X4Y13/XD4;X4Y13/XD4/F4;1"
+          }
+        },
+        "btn_stable_DFFCE_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7922 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/F5;;1;X2Y14/XD5;X2Y14/XD5/F5;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7920 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/F4;;1;X2Y16/XD4;X2Y16/XD4/F4;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_CE_LUT2_F_I0_DFFC_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7918 ] ,
+          "attributes": {
+            "ROUTING": "X4Y16/F3;;1;X4Y16/XD3;X4Y16/XD3/F3;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_DFFCE_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7916 ] ,
+          "attributes": {
+            "ROUTING": "X3Y17/F5;;1;X3Y17/XD5;X3Y17/XD5/F5;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1_I1_DFFCE_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7914 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/F5;;1;X1Y17/XD5;X1Y17/XD5/F5;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_I1_DFFCE_Q$conn$D": {
+          "hide_name": 0,
+          "bits": [ 7912 ] ,
+          "attributes": {
+            "ROUTING": "X3Y17/F4;;1;X3Y17/XD4;X3Y17/XD4/F4;1"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_3_HEAD_ALULC": {
+          "hide_name": 0,
+          "bits": [ 7899 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/COUT0;;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_HEAD_ALULC": {
+          "hide_name": 0,
+          "bits": [ 7897 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/COUT0;;1"
+          }
+        },
+        "resetn_IBUF_I_O": {
+          "hide_name": 0,
+          "bits": [ 7874 ] ,
+          "attributes": {
+            "ROUTING": "X28Y28/Q6;;1;X28Y28/W830;X28Y28/W830/Q6;1;X20Y28/W800;X20Y28/W800/W838;1;X12Y28/W810;X12Y28/W810/W808;1;X4Y28/N220;X4Y28/N220/W818;1;X4Y26/N230;X4Y26/N230/N222;1;X4Y25/A6;X4Y25/A6/N231;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "resetn": {
+          "hide_name": 0,
+          "bits": [ 7573 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:3.16-3.22"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7868 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/F3;;1;X2Y17/XD3;X2Y17/XD3/F3;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:34.28-34.29",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_3_I1": {
+          "hide_name": 0,
+          "bits": [ 7867 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/W130;X2Y17/W130/Q3;1;X1Y17/A0;X1Y17/A0/W131;1;X2Y17/Q3;;1;X2Y17/B3;X2Y17/B3/Q3;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM[3]": {
+          "hide_name": 0,
+          "bits": [ 7863 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/F4;;1;X2Y17/XD4;X2Y17/XD4/F4;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:34.28-34.29",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_2_I1": {
+          "hide_name": 0,
+          "bits": [ 7862 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/W240;X2Y17/W240/Q4;1;X1Y17/X03;X1Y17/X03/W241;1;X1Y17/A1;X1Y17/A1/X03;1;X2Y17/Q4;;1;X2Y17/N240;X2Y17/N240/Q4;1;X2Y17/B4;X2Y17/B4/N240;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_3_COUT": {
+          "hide_name": 0,
+          "bits": [ 7861 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/COUT3;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM[4]": {
+          "hide_name": 0,
+          "bits": [ 7857 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/F5;;1;X2Y17/EW20;X2Y17/EW20/F5;1;X1Y17/D5;X1Y17/D5/W121;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:34.28-34.29",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1_I1": {
+          "hide_name": 0,
+          "bits": [ 7856 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/S250;X1Y17/S250/Q5;1;X1Y19/A1;X1Y19/A1/S252;1;X1Y17/Q5;;1;X1Y17/E130;X1Y17/E130/Q5;1;X2Y17/B5;X2Y17/B5/E131;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_2_COUT": {
+          "hide_name": 0,
+          "bits": [ 7855 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/COUT4;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM[5]": {
+          "hide_name": 0,
+          "bits": [ 7853 ] ,
+          "attributes": {
+            "ROUTING": "X3Y17/F0;;1;X3Y17/D4;X3Y17/D4/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:34.28-34.29",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_I1": {
+          "hide_name": 0,
+          "bits": [ 7852 ] ,
+          "attributes": {
+            "ROUTING": "X3Y17/S100;X3Y17/S100/Q4;1;X3Y17/B0;X3Y17/B0/S100;1;X3Y17/Q4;;1;X3Y17/W130;X3Y17/W130/Q4;1;X2Y17/S270;X2Y17/S270/W131;1;X2Y19/A0;X2Y19/A0/S272;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 7851 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 ",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM_ALU_SUM_1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7850 ] ,
+          "attributes": {
+            "ROUTING": "X3Y17/CIN0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_SUM[1]": {
+          "hide_name": 0,
+          "bits": [ 7846 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/F2;;1;X2Y17/E220;X2Y17/E220/F2;1;X3Y17/D5;X3Y17/D5/E221;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:34.28-34.29",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1": {
+          "hide_name": 0,
+          "bits": [ 7845 ] ,
+          "attributes": {
+            "ROUTING": "X3Y17/W250;X3Y17/W250/Q5;1;X1Y17/A2;X1Y17/A2/W252;1;X3Y17/Q5;;1;X3Y17/EW10;X3Y17/EW10/Q5;1;X2Y17/B2;X2Y17/B2/W111;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_COUT": {
+          "hide_name": 0,
+          "bits": [ 7844 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/COUT2;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_SUM": {
+          "hide_name": 0,
+          "bits": [ 7842 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7841 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/COUT1;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_CE_LUT2_F_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 7837 ] ,
+          "attributes": {
+            "ROUTING": "X4Y16/Q3;;1;X4Y16/X06;X4Y16/X06/Q3;1;X4Y16/A6;X4Y16/A6/X06;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0": {
+          "hide_name": 0,
+          "bits": [ 7835 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/W130;X2Y16/W130/Q4;1;X1Y16/A2;X1Y16/A2/W131;1;X2Y16/Q4;;1;X2Y16/SN10;X2Y16/SN10/Q4;1;X2Y17/B1;X2Y17/B1/S111;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_DFFCE_D_CE": {
+          "hide_name": 0,
+          "bits": [ 7834 ] ,
+          "attributes": {
+            "ROUTING": "X4Y16/W260;X4Y16/W260/F6;1;X2Y16/X07;X2Y16/X07/W262;1;X2Y16/CE2;X2Y16/CE2/X07;1;X2Y17/CE1;X2Y17/CE1/W212;1;X3Y16/W210;X3Y16/W210/W111;1;X1Y16/S210;X1Y16/S210/W212;1;X1Y17/CE2;X1Y17/CE2/S211;1;X4Y16/SN10;X4Y16/SN10/F6;1;X4Y17/W210;X4Y17/W210/S111;1;X2Y17/CE2;X2Y17/CE2/W212;1;X4Y16/F6;;1;X4Y16/EW10;X4Y16/EW10/F6;1;X3Y16/S210;X3Y16/S210/W111;1;X3Y17/CE2;X3Y17/CE2/S211;1"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D[0]": {
+          "hide_name": 0,
+          "bits": [ 7831 ] ,
+          "attributes": {
+            "ROUTING": "X1Y16/E220;X1Y16/E220/F2;1;X2Y16/D4;X2Y16/D4/E221;1;X1Y16/F2;;1;X1Y16/XD2;X1Y16/XD2/F2;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:52.27-52.41|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:34.28-34.29",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_LUT1_I0_F[1]": {
+          "hide_name": 0,
+          "bits": [ 7828 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/F2;;1;X1Y17/XD2;X1Y17/XD2/F2;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_LUT1_I0_F[2]": {
+          "hide_name": 0,
+          "bits": [ 7826 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/F0;;1;X1Y17/XD0;X1Y17/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_LUT1_I0_F[3]": {
+          "hide_name": 0,
+          "bits": [ 7824 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/F1;;1;X1Y17/XD1;X1Y17/XD1/F1;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_LUT1_I0_F[4]": {
+          "hide_name": 0,
+          "bits": [ 7822 ] ,
+          "attributes": {
+            "ROUTING": "X1Y19/F1;;1;X1Y19/XD1;X1Y19/XD1/F1;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "led_OBUF_O_I_DFFC_Q_5_D_LUT1_F_I0_ALU_I1_COUT_ALU_CIN_I1_LUT1_I0_F[5]": {
+          "hide_name": 0,
+          "bits": [ 7820 ] ,
+          "attributes": {
+            "ROUTING": "X2Y19/F0;;1;X2Y19/XD0;X2Y19/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "led[0]": {
+          "hide_name": 0,
+          "bits": [ 7818 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25"
+          }
+        },
+        "led_OBUF_O_I[0]": {
+          "hide_name": 0,
+          "bits": [ 7817 ] ,
+          "attributes": {
+            "ROUTING": "X1Y16/Q2;;1;X1Y16/W130;X1Y16/W130/Q2;1;X0Y16/N270;X0Y16/N270/W131;1;X0Y14/A0;X0Y14/A0/N272;1"
+          }
+        },
+        "led[1]": {
+          "hide_name": 0,
+          "bits": [ 7815 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25"
+          }
+        },
+        "led_OBUF_O_I[1]": {
+          "hide_name": 0,
+          "bits": [ 7814 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/Q2;;1;X1Y17/N220;X1Y17/N220/Q2;1;X1Y15/W220;X1Y15/W220/N222;1;X0Y15/D1;X0Y15/D1/W221;1"
+          }
+        },
+        "led[2]": {
+          "hide_name": 0,
+          "bits": [ 7812 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25"
+          }
+        },
+        "led_OBUF_O_I[2]": {
+          "hide_name": 0,
+          "bits": [ 7811 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/Q0;;1;X1Y17/EW10;X1Y17/EW10/Q0;1;X0Y17/S250;X0Y17/S250/W111;1;X0Y19/S200;X0Y19/S200/S252;1;X0Y20/D1;X0Y20/D1/S201;1"
+          }
+        },
+        "led[3]": {
+          "hide_name": 0,
+          "bits": [ 7809 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25"
+          }
+        },
+        "led_OBUF_O_I[3]": {
+          "hide_name": 0,
+          "bits": [ 7808 ] ,
+          "attributes": {
+            "ROUTING": "X1Y17/Q1;;1;X1Y17/S810;X1Y17/S810/Q1;1;X1Y21/W220;X1Y21/W220/S814;1;X0Y21/D1;X0Y21/D1/W221;1"
+          }
+        },
+        "led[4]": {
+          "hide_name": 0,
+          "bits": [ 7806 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25"
+          }
+        },
+        "led_OBUF_O_I[4]": {
+          "hide_name": 0,
+          "bits": [ 7805 ] ,
+          "attributes": {
+            "ROUTING": "X1Y19/Q1;;1;X1Y19/S100;X1Y19/S100/Q1;1;X1Y20/S800;X1Y20/S800/S101;1;X1Y24/W200;X1Y24/W200/S804;1;X0Y24/D1;X0Y24/D1/W201;1"
+          }
+        },
+        "led[5]": {
+          "hide_name": 0,
+          "bits": [ 7803 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:5.22-5.25"
+          }
+        },
+        "led_OBUF_O_I[5]": {
+          "hide_name": 0,
+          "bits": [ 7802 ] ,
+          "attributes": {
+            "ROUTING": "X2Y19/Q0;;1;X2Y19/S800;X2Y19/S800/Q0;1;X2Y27/W200;X2Y27/W200/S808;1;X0Y27/N200;X0Y27/N200/W202;1;X0Y25/D1;X0Y25/D1/N202;1"
+          }
+        },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 7571 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:2.11-2.14"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_3_COUT": {
+          "hide_name": 0,
+          "bits": [ 7788 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/COUT1;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_2_COUT": {
+          "hide_name": 0,
+          "bits": [ 7786 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/COUT2;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7784 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/COUT3;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0[3]": {
+          "hide_name": 0,
+          "bits": [ 7782 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/S230;X3Y14/S230/Q3;1;X3Y15/B1;X3Y15/B1/S231;1;X3Y14/Q3;;1;X3Y14/EW20;X3Y14/EW20/Q3;1;X2Y14/D1;X2Y14/D1/W121;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0[2]": {
+          "hide_name": 0,
+          "bits": [ 7781 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/SN10;X3Y14/SN10/Q4;1;X3Y15/B2;X3Y15/B2/S111;1;X3Y14/Q4;;1;X3Y14/W100;X3Y14/W100/Q4;1;X2Y14/C1;X2Y14/C1/W101;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0[1]": {
+          "hide_name": 0,
+          "bits": [ 7780 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/S210;X3Y14/S210/Q1;1;X3Y15/B3;X3Y15/B3/S211;1;X3Y14/Q1;;1;X3Y14/EW10;X3Y14/EW10/Q1;1;X2Y14/B1;X2Y14/B1/W111;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0[0]": {
+          "hide_name": 0,
+          "bits": [ 7779 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/S130;X2Y14/S130/Q2;1;X2Y15/E230;X2Y15/E230/S131;1;X3Y15/B4;X3Y15/B4/E231;1;X2Y14/Q2;;1;X2Y14/X01;X2Y14/X01/Q2;1;X2Y14/A1;X2Y14/A1/X01;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0[4]": {
+          "hide_name": 0,
+          "bits": [ 7776 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/F7;;1;X2Y16/N270;X2Y16/N270/F7;1;X2Y14/X08;X2Y14/X08/N272;1;X2Y14/SEL0;X2Y14/SEL0/X08;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I1": {
+          "hide_name": 0,
+          "bits": [ 7775 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/F1;;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:151.13-151.15"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_I0": {
+          "hide_name": 0,
+          "bits": [ 7774 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/F0;;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:151.9-151.11"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[0]": {
+          "hide_name": 0,
+          "bits": [ 7771 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/F0;;1;X1Y14/XD0;X1Y14/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_3_SUM": {
+          "hide_name": 0,
+          "bits": [ 7766 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 "
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_3_COUT": {
+          "hide_name": 0,
+          "bits": [ 7764 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/COUT1;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_2_COUT": {
+          "hide_name": 0,
+          "bits": [ 7762 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/COUT2;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7760 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/COUT3;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0[3]": {
+          "hide_name": 0,
+          "bits": [ 7754 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/N230;X2Y16/N230/Q3;1;X2Y15/B3;X2Y15/B3/N231;1;X2Y16/Q3;;1;X2Y16/S130;X2Y16/S130/Q3;1;X2Y16/D7;X2Y16/D7/S130;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7752 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/COUT4;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_3_COUT": {
+          "hide_name": 0,
+          "bits": [ 7750 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/CIN0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_2_COUT": {
+          "hide_name": 0,
+          "bits": [ 7748 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/COUT0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7746 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/COUT2;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7745 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/COUT1;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0[3]": {
+          "hide_name": 0,
+          "bits": [ 7743 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/EW10;X2Y13/EW10/Q3;1;X1Y13/S250;X1Y13/S250/W111;1;X1Y15/B5;X1Y15/B5/S252;1;X2Y13/Q3;;1;X2Y13/X02;X2Y13/X02/Q3;1;X2Y13/D4;X2Y13/D4/X02;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0[2]": {
+          "hide_name": 0,
+          "bits": [ 7742 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/S210;X2Y13/S210/Q1;1;X2Y15/B0;X2Y15/B0/S212;1;X2Y13/Q1;;1;X2Y13/X06;X2Y13/X06/Q1;1;X2Y13/C4;X2Y13/C4/X06;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0[1]": {
+          "hide_name": 0,
+          "bits": [ 7741 ] ,
+          "attributes": {
+            "ROUTING": "X3Y13/W130;X3Y13/W130/Q4;1;X2Y13/S230;X2Y13/S230/W131;1;X2Y15/B1;X2Y15/B1/S232;1;X3Y13/Q4;;1;X3Y13/EW10;X3Y13/EW10/Q4;1;X2Y13/B4;X2Y13/B4/W111;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 7740 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/S250;X2Y13/S250/Q5;1;X2Y15/S250;X2Y15/S250/S252;1;X2Y15/B2;X2Y15/B2/S250;1;X2Y13/Q5;;1;X2Y13/E100;X2Y13/E100/Q5;1;X2Y13/A4;X2Y13/A4/E100;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0[3]": {
+          "hide_name": 0,
+          "bits": [ 7738 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/SN10;X1Y14/SN10/Q0;1;X1Y15/B1;X1Y15/B1/S111;1;X1Y14/X01;X1Y14/X01/Q0;1;X1Y14/C0;X1Y14/C0/X01;1;X1Y14/Q0;;1;X1Y14/S100;X1Y14/S100/Q0;1;X1Y14/D5;X1Y14/D5/S100;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0[2]": {
+          "hide_name": 0,
+          "bits": [ 7737 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/S210;X1Y14/S210/Q1;1;X1Y15/B2;X1Y15/B2/S211;1;X1Y14/Q1;;1;X1Y14/N100;X1Y14/N100/Q1;1;X1Y14/C5;X1Y14/C5/N100;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0[1]": {
+          "hide_name": 0,
+          "bits": [ 7736 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/S230;X1Y14/S230/Q3;1;X1Y15/B3;X1Y15/B3/S231;1;X1Y14/Q3;;1;X1Y14/W100;X1Y14/W100/Q3;1;X1Y14/B5;X1Y14/B5/W100;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 7735 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/SN20;X1Y14/SN20/Q2;1;X1Y15/B4;X1Y15/B4/S121;1;X1Y14/Q2;;1;X1Y14/X05;X1Y14/X05/Q2;1;X1Y14/A5;X1Y14/A5/X05;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7729 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/COUT4;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_3_COUT": {
+          "hide_name": 0,
+          "bits": [ 7727 ] ,
+          "attributes": {
+            "ROUTING": "X4Y15/CIN0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_2_COUT": {
+          "hide_name": 0,
+          "bits": [ 7725 ] ,
+          "attributes": {
+            "ROUTING": "X4Y15/COUT0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7723 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "unused_bits": "0 ",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_1_COUT": {
+          "hide_name": 0,
+          "bits": [ 7722 ] ,
+          "attributes": {
+            "ROUTING": "X4Y15/COUT1;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0[3]": {
+          "hide_name": 0,
+          "bits": [ 7720 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/E100;X3Y14/E100/Q0;1;X4Y14/D7;X4Y14/D7/E101;1;X3Y14/Q0;;1;X3Y14/SN20;X3Y14/SN20/Q0;1;X3Y15/B5;X3Y15/B5/S121;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0[2]": {
+          "hide_name": 0,
+          "bits": [ 7719 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/S210;X4Y14/S210/Q1;1;X4Y15/B0;X4Y15/B0/S211;1;X4Y14/Q1;;1;X4Y14/X06;X4Y14/X06/Q1;1;X4Y14/C7;X4Y14/C7/X06;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0[1]": {
+          "hide_name": 0,
+          "bits": [ 7718 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/SN10;X4Y14/SN10/Q2;1;X4Y15/B1;X4Y15/B1/S111;1;X4Y14/Q2;;1;X4Y14/W130;X4Y14/W130/Q2;1;X4Y14/B7;X4Y14/B7/W130;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 7717 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/E130;X4Y14/E130/Q0;1;X4Y14/A7;X4Y14/A7/E130;1;X4Y14/Q0;;1;X4Y14/S200;X4Y14/S200/Q0;1;X4Y15/X01;X4Y15/X01/S201;1;X4Y15/B2;X4Y15/B2/X01;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2[2]": {
+          "hide_name": 0,
+          "bits": [ 7715 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/F7;;1;X4Y14/X04;X4Y14/X04/F7;1;X4Y14/C3;X4Y14/C3/X04;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0[3]": {
+          "hide_name": 0,
+          "bits": [ 7713 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/F3;;1;X4Y14/W100;X4Y14/W100/F3;1;X3Y14/W200;X3Y14/W200/W101;1;X2Y14/D3;X2Y14/D3/W201;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0[2]": {
+          "hide_name": 0,
+          "bits": [ 7712 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/OF0;;1;X2Y14/E100;X2Y14/E100/OF0;1;X2Y14/W220;X2Y14/W220/E100;1;X2Y14/C3;X2Y14/C3/W220;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0[1]": {
+          "hide_name": 0,
+          "bits": [ 7711 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/F4;;1;X2Y13/SN10;X2Y13/SN10/F4;1;X2Y14/B3;X2Y14/B3/S111;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 7710 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/F5;;1;X1Y14/E250;X1Y14/E250/F5;1;X2Y14/A3;X2Y14/A3/E251;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE": {
+          "hide_name": 0,
+          "bits": [ 7708 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/F3;;1;X2Y14/X06;X2Y14/X06/F3;1;X2Y14/CE2;X2Y14/CE2/X06;1"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0[2]": {
+          "hide_name": 0,
+          "bits": [ 7705 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/N220;X2Y16/N220/Q2;1;X2Y15/X01;X2Y15/X01/N221;1;X2Y15/B4;X2Y15/B4/X01;1;X2Y16/Q2;;1;X2Y16/N130;X2Y16/N130/Q2;1;X2Y16/C7;X2Y16/C7/N130;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_COUT_ALU_CIN_COUT": {
+          "hide_name": 0,
+          "bits": [ 7704 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/COUT3;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7702 ] ,
+          "attributes": {
+            "ROUTING": "X4Y15/F2;;1;X4Y15/SN20;X4Y15/SN20/F2;1;X4Y14/C0;X4Y14/C0/N121;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[19]": {
+          "hide_name": 0,
+          "bits": [ 7701 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/F0;;1;X4Y14/XD0;X4Y14/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_2_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7699 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/F2;;1;X1Y15/N130;X1Y15/N130/F2;1;X1Y14/W230;X1Y14/W230/N131;1;X1Y14/C1;X1Y14/C1/W230;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[1]": {
+          "hide_name": 0,
+          "bits": [ 7698 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/F1;;1;X1Y14/XD1;X1Y14/XD1/F1;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7696 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/F3;;1;X1Y15/SN20;X1Y15/SN20/F3;1;X1Y14/C3;X1Y14/C3/N121;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[2]": {
+          "hide_name": 0,
+          "bits": [ 7695 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/F3;;1;X1Y14/XD3;X1Y14/XD3/F3;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_I0_ALU_I1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7693 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/F4;;1;X1Y15/N240;X1Y15/N240/F4;1;X1Y14/C2;X1Y14/C2/N241;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[3]": {
+          "hide_name": 0,
+          "bits": [ 7692 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/F2;;1;X1Y14/XD2;X1Y14/XD2/F2;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_3_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7690 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/F5;;1;X1Y15/EW20;X1Y15/EW20/F5;1;X2Y15/N260;X2Y15/N260/E121;1;X2Y13/C3;X2Y13/C3/N262;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[4]": {
+          "hide_name": 0,
+          "bits": [ 7689 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/F3;;1;X2Y13/XD3;X2Y13/XD3/F3;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_2_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7687 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/F0;;1;X2Y15/N200;X2Y15/N200/F0;1;X2Y13/X01;X2Y13/X01/N202;1;X2Y13/C1;X2Y13/C1/X01;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[5]": {
+          "hide_name": 0,
+          "bits": [ 7686 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/F1;;1;X2Y13/XD1;X2Y13/XD1/F1;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7684 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/F1;;1;X2Y15/EW20;X2Y15/EW20/F1;1;X3Y15/N220;X3Y15/N220/E121;1;X3Y13/C4;X3Y13/C4/N222;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[6]": {
+          "hide_name": 0,
+          "bits": [ 7683 ] ,
+          "attributes": {
+            "ROUTING": "X3Y13/F4;;1;X3Y13/XD4;X3Y13/XD4/F4;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT4_F_1_I0_ALU_I1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7681 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/F2;;1;X2Y15/N220;X2Y15/N220/F2;1;X2Y13/C5;X2Y13/C5/N222;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[7]": {
+          "hide_name": 0,
+          "bits": [ 7680 ] ,
+          "attributes": {
+            "ROUTING": "X2Y13/F5;;1;X2Y13/XD5;X2Y13/XD5/F5;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0[1]": {
+          "hide_name": 0,
+          "bits": [ 7678 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/N100;X2Y16/N100/Q0;1;X2Y15/B5;X2Y15/B5/N101;1;X2Y16/Q0;;1;X2Y16/X05;X2Y16/X05/Q0;1;X2Y16/B7;X2Y16/B7/X05;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_I2_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 7677 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/COUT4;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_18_I2[2]": {
+          "hide_name": 0,
+          "bits": [ 7675 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/F5;;1;X2Y15/S100;X2Y15/S100/F5;1;X2Y16/C0;X2Y16/C0/S101;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[10]": {
+          "hide_name": 0,
+          "bits": [ 7674 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/F0;;1;X2Y16/XD0;X2Y16/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "$PACKER_GND": {
+          "hide_name": 1,
+          "bits": [ 7893 ] ,
+          "attributes": {
+            "ROUTING": "X1Y15/A2;X1Y15/A2/N210;1;X2Y15/A5;X2Y15/A5/W210;1;X2Y15/W210;X2Y15/W210/VSS;1;X2Y15/A4;X2Y15/A4/W210;1;X2Y15/A1;X2Y15/A1/E210;1;X2Y15/A2;X2Y15/A2/N210;1;X3Y17/E210;X3Y17/E210/VSS;1;X3Y17/A0;X3Y17/A0/E210;1;X4Y15/N210;X4Y15/N210/VSS;1;X4Y15/A2;X4Y15/A2/N210;1;X3Y15/A1;X3Y15/A1/E210;1;X2Y15/N210;X2Y15/N210/VSS;1;X2Y15/A3;X2Y15/A3/N210;1;X3Y15/A5;X3Y15/A5/W210;1;X4Y15/A0;X4Y15/A0/E210;1;X1Y15/N210;X1Y15/N210/VSS;1;X1Y15/A3;X1Y15/A3/N210;1;X3Y15/A2;X3Y15/A2/N210;1;X4Y15/E210;X4Y15/E210/VSS;1;X4Y15/A1;X4Y15/A1/E210;1;X2Y17/A3;X2Y17/A3/N210;1;X2Y17/A5;X2Y17/A5/W210;1;X2Y17/N210;X2Y17/N210/VSS;1;X2Y17/A2;X2Y17/A2/N210;1;X3Y15/E210;X3Y15/E210/VSS;1;X3Y15/A0;X3Y15/A0/E210;1;X3Y15/W210;X3Y15/W210/VSS;1;X3Y15/A4;X3Y15/A4/W210;1;X2Y17/W210;X2Y17/W210/VSS;1;X2Y17/A4;X2Y17/A4/W210;1;X1Y15/A5;X1Y15/A5/W210;1;X3Y15/N210;X3Y15/N210/VSS;1;X3Y15/A3;X3Y15/A3/N210;1;X1Y15/W210;X1Y15/W210/VSS;1;X1Y15/A4;X1Y15/A4/W210;1;X0Y0/VSS;;1;X2Y15/E210;X2Y15/E210/VSS;1;X2Y15/A0;X2Y15/A0/E210;1"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_LUT4_F_I0[0]": {
+          "hide_name": 0,
+          "bits": [ 7671 ] ,
+          "attributes": {
+            "ROUTING": "X3Y16/N130;X3Y16/N130/Q0;1;X3Y15/B0;X3Y15/B0/N131;1;X3Y16/Q0;;1;X3Y16/W130;X3Y16/W130/Q0;1;X2Y16/A7;X2Y16/A7/W131;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "$PACKER_VCC": {
+          "hide_name": 1,
+          "bits": [ 7892 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/D3;X3Y15/D3/X08;1;X2Y15/C3;X2Y15/C3/X04;1;X3Y15/C3;X3Y15/C3/W220;1;X2Y17/C0;X2Y17/C0/X04;1;X1Y15/D1;X1Y15/D1/X03;1;X2Y17/C1;X2Y17/C1/X04;1;X2Y15/D1;X2Y15/D1/X08;1;X4Y15/C2;X4Y15/C2/X04;1;X0Y0/N200;X0Y0/N200/VCC;1;X0Y0/C4;X0Y0/C4/S201;1;X3Y15/D4;X3Y15/D4/X04;1;X2Y17/C4;X2Y17/C4/X08;1;X2Y17/D4;X2Y17/D4/X04;1;X2Y17/X08;X2Y17/X08/VCC;1;X2Y17/C5;X2Y17/C5/X08;1;X2Y17/D3;X2Y17/D3/X03;1;X2Y15/C1;X2Y15/C1/X04;1;X2Y17/C3;X2Y17/C3/X04;1;X2Y15/C2;X2Y15/C2/X04;1;X3Y15/C0;X3Y15/C0/X04;1;X3Y15/X04;X3Y15/X04/VCC;1;X3Y15/C1;X3Y15/C1/X04;1;X4Y15/D2;X4Y15/D2/X03;1;X1Y15/C4;X1Y15/C4/X08;1;X3Y15/W220;X3Y15/W220/VCC;1;X3Y15/C2;X3Y15/C2/W220;1;X3Y15/C4;X3Y15/C4/X08;1;X1Y15/X08;X1Y15/X08/VCC;1;X1Y15/C5;X1Y15/C5/X08;1;X2Y15/D0;X2Y15/D0/X08;1;X3Y15/D1;X3Y15/D1/X08;1;X2Y17/D2;X2Y17/D2/X03;1;X1Y15/C2;X1Y15/C2/X04;1;X4Y15/D0;X4Y15/D0/X03;1;X2Y15/C5;X2Y15/C5/X08;1;X1Y15/A1;X1Y15/A1/X03;1;X2Y15/D3;X2Y15/D3/X08;1;X1Y15/C3;X1Y15/C3/X04;1;X1Y15/D3;X1Y15/D3/X03;1;X2Y17/C2;X2Y17/C2/X04;1;X2Y15/D4;X2Y15/D4/X04;1;X3Y15/D2;X3Y15/D2/X08;1;X4Y15/X03;X4Y15/X03/VCC;1;X4Y15/D1;X4Y15/D1/X03;1;X2Y17/D1;X2Y17/D1/X03;1;X2Y15/D5;X2Y15/D5/X04;1;X4Y15/C1;X4Y15/C1/X04;1;X3Y17/X04;X3Y17/X04/VCC;1;X3Y17/C0;X3Y17/C0/X04;1;X2Y15/D2;X2Y15/D2/X08;1;X3Y15/D0;X3Y15/D0/X08;1;X1Y15/D5;X1Y15/D5/X04;1;X2Y17/X04;X2Y17/X04/VCC;1;X2Y17/D5;X2Y17/D5/X04;1;X1Y15/X03;X1Y15/X03/VCC;1;X1Y15/D2;X1Y15/D2/X03;1;X3Y15/X08;X3Y15/X08/VCC;1;X3Y15/C5;X3Y15/C5/X08;1;X2Y15/X08;X2Y15/X08/VCC;1;X2Y15/C4;X2Y15/C4/X08;1;X3Y17/S260;X3Y17/S260/VCC;1;X3Y17/D0;X3Y17/D0/S260;1;X4Y15/X04;X4Y15/X04/VCC;1;X4Y15/C0;X4Y15/C0/X04;1;X2Y17/X03;X2Y17/X03/VCC;1;X2Y17/A1;X2Y17/A1/X03;1;X3Y15/X07;X3Y15/X07/VCC;1;X3Y15/D5;X3Y15/D5/X07;1;X1Y15/X04;X1Y15/X04/VCC;1;X1Y15/D4;X1Y15/D4/X04;1;X1Y15/C0;X1Y15/C0/N220;1;X1Y15/N220;X1Y15/N220/VCC;1;X1Y15/C1;X1Y15/C1/N220;1;X0Y0/VCC;;1;X2Y15/X04;X2Y15/X04/VCC;1;X2Y15/C0;X2Y15/C0/X04;1"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_3_CIN": {
+          "hide_name": 0,
+          "bits": [ 7659 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/COUT0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_18_I2_ALU_SUM_COUT": {
+          "hide_name": 0,
+          "bits": [ 7658 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/CIN0;;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:42.37-42.61|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/arith_map.v:57.7-63.5|C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_sim.v:938.25-938.29",
+            "abc9_carry": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_17_I2[2]": {
+          "hide_name": 0,
+          "bits": [ 7656 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/F0;;1;X3Y15/S100;X3Y15/S100/F0;1;X3Y16/C0;X3Y16/C0/S101;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[11]": {
+          "hide_name": 0,
+          "bits": [ 7655 ] ,
+          "attributes": {
+            "ROUTING": "X3Y16/F0;;1;X3Y16/XD0;X3Y16/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_3_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7653 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/F1;;1;X3Y15/N130;X3Y15/N130/F1;1;X3Y14/N230;X3Y14/N230/N131;1;X3Y14/C3;X3Y14/C3/N230;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[12]": {
+          "hide_name": 0,
+          "bits": [ 7652 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/F3;;1;X3Y14/XD3;X3Y14/XD3/F3;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_2_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7650 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/F2;;1;X3Y15/SN10;X3Y15/SN10/F2;1;X3Y14/C4;X3Y14/C4/N111;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[13]": {
+          "hide_name": 0,
+          "bits": [ 7649 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/F4;;1;X3Y14/XD4;X3Y14/XD4/F4;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7647 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/F3;;1;X3Y15/SN20;X3Y15/SN20/F3;1;X3Y14/C1;X3Y14/C1/N121;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[14]": {
+          "hide_name": 0,
+          "bits": [ 7646 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/F1;;1;X3Y14/XD1;X3Y14/XD1/F1;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_MUX2_LUT5_O_S0_ALU_I1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7644 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/F4;;1;X3Y15/N100;X3Y15/N100/F4;1;X3Y14/W240;X3Y14/W240/N101;1;X2Y14/C2;X2Y14/C2/W241;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[15]": {
+          "hide_name": 0,
+          "bits": [ 7643 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/F2;;1;X2Y14/XD2;X2Y14/XD2/F2;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_3_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7641 ] ,
+          "attributes": {
+            "ROUTING": "X3Y15/F5;;1;X3Y15/N250;X3Y15/N250/F5;1;X3Y14/X04;X3Y14/X04/N251;1;X3Y14/C0;X3Y14/C0/X04;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[16]": {
+          "hide_name": 0,
+          "bits": [ 7640 ] ,
+          "attributes": {
+            "ROUTING": "X3Y14/F0;;1;X3Y14/XD0;X3Y14/XD0/F0;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_2_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7638 ] ,
+          "attributes": {
+            "ROUTING": "X4Y15/F0;;1;X4Y15/N200;X4Y15/N200/F0;1;X4Y14/X01;X4Y14/X01/N201;1;X4Y14/C1;X4Y14/C1/X01;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[17]": {
+          "hide_name": 0,
+          "bits": [ 7637 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/F1;;1;X4Y14/XD1;X4Y14/XD1/F1;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn_stable_DFFCE_Q_CE_LUT4_F_I0_LUT3_F_I2_LUT4_F_I0_ALU_I1_1_SUM[2]": {
+          "hide_name": 0,
+          "bits": [ 7635 ] ,
+          "attributes": {
+            "ROUTING": "X4Y15/F1;;1;X4Y15/N130;X4Y15/N130/F1;1;X4Y14/N230;X4Y14/N230/N131;1;X4Y14/C2;X4Y14/C2/N230;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[18]": {
+          "hide_name": 0,
+          "bits": [ 7634 ] ,
+          "attributes": {
+            "ROUTING": "X4Y14/F2;;1;X4Y14/XD2;X4Y14/XD2/F2;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn1_sync1_LUT3_I1_1_I2[2]": {
+          "hide_name": 0,
+          "bits": [ 7632 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/F3;;1;X2Y15/SN20;X2Y15/SN20/F3;1;X2Y16/W220;X2Y16/W220/S121;1;X2Y16/C3;X2Y16/C3/W220;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[8]": {
+          "hide_name": 0,
+          "bits": [ 7631 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/F3;;1;X2Y16/XD3;X2Y16/XD3/F3;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn1_sync1_LUT3_I1_I2[2]": {
+          "hide_name": 0,
+          "bits": [ 7629 ] ,
+          "attributes": {
+            "ROUTING": "X2Y15/F4;;1;X2Y15/S240;X2Y15/S240/F4;1;X2Y16/C2;X2Y16/C2/S241;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_17_I2[0]": {
+          "hide_name": 0,
+          "bits": [ 7608 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/A2;X2Y16/A2/S252;1;X4Y14/A2;X4Y14/A2/E252;1;X2Y13/A3;X2Y13/A3/N111;1;X4Y16/X08;X4Y16/X08/S252;1;X4Y16/D3;X4Y16/D3/X08;1;X2Y16/A0;X2Y16/A0/S252;1;X2Y14/N130;X2Y14/N130/Q5;1;X2Y14/A2;X2Y14/A2/N130;1;X2Y13/E250;X2Y13/E250/N111;1;X3Y13/A4;X3Y13/A4/E251;1;X4Y14/A0;X4Y14/A0/E252;1;X3Y14/A4;X3Y14/A4/E251;1;X3Y14/A1;X3Y14/A1/E251;1;X3Y14/A3;X3Y14/A3/E251;1;X1Y14/A0;X1Y14/A0/W131;1;X2Y16/E250;X2Y16/E250/S252;1;X3Y16/A0;X3Y16/A0/E251;1;X2Y14/SN10;X2Y14/SN10/Q5;1;X2Y13/A1;X2Y13/A1/N111;1;X3Y14/A0;X3Y14/A0/E251;1;X1Y14/A3;X1Y14/A3/W131;1;X1Y14/A1;X1Y14/A1/W131;1;X2Y14/SN20;X2Y14/SN20/Q5;1;X2Y13/A5;X2Y13/A5/N121;1;X4Y14/S250;X4Y14/S250/E252;1;X4Y16/B6;X4Y16/B6/S252;1;X2Y14/W130;X2Y14/W130/Q5;1;X1Y14/A2;X1Y14/A2/W131;1;X4Y14/A1;X4Y14/A1/E252;1;X2Y14/S250;X2Y14/S250/Q5;1;X2Y16/A3;X2Y16/A3/S252;1;X2Y14/Q5;;1;X2Y14/E250;X2Y14/E250/Q5;1;X4Y14/A3;X4Y14/A3/E252;1",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21",
+            "force_downto": "00000000000000000000000000000001"
+          }
+        },
+        "btn1_sync1_LUT3_I1_F[9]": {
+          "hide_name": 0,
+          "bits": [ 7606 ] ,
+          "attributes": {
+            "ROUTING": "X2Y16/F2;;1;X2Y16/XD2;X2Y16/XD2/F2;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:26.1-61.4"
+          }
+        },
+        "btn1_sync1": {
+          "hide_name": 0,
+          "bits": [ 7585 ] ,
+          "attributes": {
+            "ROUTING": "X1Y14/B2;X1Y14/B2/W211;1;X2Y13/X07;X2Y13/X07/W242;1;X2Y13/B1;X2Y13/B1/X07;1;X4Y13/EW10;X4Y13/EW10/Q4;1;X3Y13/B4;X3Y13/B4/W111;1;X4Y14/B2;X4Y14/B2/S111;1;X3Y14/B0;X3Y14/B0/W211;1;X4Y14/B0;X4Y14/B0/S111;1;X2Y16/B0;X2Y16/B0/S212;1;X1Y14/B3;X1Y14/B3/W211;1;X2Y14/B2;X2Y14/B2/W212;1;X1Y14/B1;X1Y14/B1/W211;1;X2Y14/W210;X2Y14/W210/W212;1;X1Y14/B0;X1Y14/B0/W211;1;X2Y16/B2;X2Y16/B2/S212;1;X4Y14/B1;X4Y14/B1/S111;1;X2Y13/B3;X2Y13/B3/X03;1;X3Y14/B3;X3Y14/B3/S231;1;X2Y13/S240;X2Y13/S240/W242;1;X2Y14/D5;X2Y14/D5/S241;1;X4Y13/W240;X4Y13/W240/Q4;1;X2Y13/X03;X2Y13/X03/W242;1;X2Y13/B5;X2Y13/B5/X03;1;X3Y14/B1;X3Y14/B1/S231;1;X3Y13/S230;X3Y13/S230/W131;1;X3Y15/S230;X3Y15/S230/S232;1;X3Y16/B0;X3Y16/B0/S231;1;X4Y13/SN10;X4Y13/SN10/Q4;1;X4Y14/B3;X4Y14/B3/S111;1;X4Y14/W210;X4Y14/W210/S111;1;X2Y14/S210;X2Y14/S210/W212;1;X2Y16/B3;X2Y16/B3/S212;1;X4Y13/Q4;;1;X4Y13/W130;X4Y13/W130/Q4;1;X3Y13/S270;X3Y13/S270/W131;1;X3Y14/B4;X3Y14/B4/S271;1",
+            "force_downto": "00000000000000000000000000000001",
+            "src": "C:\\Users\\Pasandu\\DOCUME~1\\OSS-CA~1\\bin\\../share/yosys/gowin/cells_map.v:130.20-130.21"
+          }
+        },
+        "btn1_sync0": {
+          "hide_name": 0,
+          "bits": [ 7581 ] ,
+          "attributes": {
+            "ROUTING": "X4Y13/Q0;;1;X4Y13/S100;X4Y13/S100/Q0;1;X4Y13/D4;X4Y13/D4/S100;1",
+            "src": "d:\\FPGA\\Button\\counter2.v:8.5-8.15"
+          }
+        },
+        "clk_IBUF_I_O": {
+          "hide_name": 0,
+          "bits": [ 7580 ] ,
+          "attributes": {
+            "ROUTING": "X2Y17/CLK1;X2Y17/CLK1/GB00;5;X2Y17/CLK2;X2Y17/CLK2/GB00;5;X1Y17/CLK2;X1Y17/CLK2/GB00;5;X3Y17/CLK2;X3Y17/CLK2/GB00;5;X4Y16/CLK1;X4Y16/CLK1/GB00;5;X2Y16/CLK2;X2Y16/CLK2/GB00;5;X1Y16/CLK1;X1Y16/CLK1/GB00;5;X1Y17/CLK1;X1Y17/CLK1/GB00;5;X4Y17/GB00;X3Y17/GBO0/GT00;5;X1Y17/CLK0;X1Y17/CLK0/GB00;5;X1Y19/CLK0;X1Y19/CLK0/GB00;5;X2Y19/GB00;X3Y19/GBO0/GT00;5;X2Y19/CLK0;X2Y19/CLK0/GB00;5;X2Y16/CLK1;X2Y16/CLK1/GB00;5;X2Y16/CLK0;X2Y16/CLK0/GB00;5;X2Y16/GB00;X3Y16/GBO0/GT00;5;X3Y16/CLK0;X3Y16/CLK0/GB00;5;X3Y14/CLK1;X3Y14/CLK1/GB00;5;X3Y14/CLK2;X3Y14/CLK2/GB00;5;X2Y14/CLK1;X2Y14/CLK1/GB00;5;X1Y14/CLK0;X1Y14/CLK0/GB00;5;X1Y14/CLK1;X1Y14/CLK1/GB00;5;X2Y13/CLK1;X2Y13/CLK1/GB00;5;X2Y13/CLK0;X2Y13/CLK0/GB00;5;X3Y13/CLK2;X3Y13/CLK2/GB00;5;X2Y13/CLK2;X2Y13/CLK2/GB00;5;X3Y14/CLK0;X3Y14/CLK0/GB00;5;X4Y14/CLK1;X4Y14/CLK1/GB00;5;X4Y14/CLK0;X4Y14/CLK0/GB00;5;X3Y14/GB00;X3Y14/GBO0/GT00;5;X2Y14/CLK2;X2Y14/CLK2/GB00;5;X4Y13/CLK2;X4Y13/CLK2/GB00;5;X11Y19/SPINE16;X27Y9/SPINE16/PCLKR1;5;X3Y15/GT00;X3Y19/GT00/SPINE16;5;X4Y13/GB00;X3Y13/GBO0/GT00;5;X4Y13/CLK0;X4Y13/CLK0/GB00;5;X26Y9/PCLKR1;;5"
+          }
+        },
+        "resetn_IBUF_I_O_LUT1_I0_F": {
+          "hide_name": 0,
+          "bits": [ 7579 ] ,
+          "attributes": {
+            "ROUTING": "X2Y14/LSR1;X2Y14/LSR1/N271;1;X4Y14/LSR1;X4Y14/LSR1/N271;1;X3Y14/LSR1;X3Y14/LSR1/N272;1;X4Y16/X05;X4Y16/X05/N261;1;X4Y16/LSR1;X4Y16/LSR1/X05;1;X3Y16/LSR0;X3Y16/LSR0/W211;1;X1Y17/LSR1;X1Y17/LSR1/W212;1;X1Y17/LSR0;X1Y17/LSR0/W212;1;X2Y16/LSR1;X2Y16/LSR1/W212;1;X4Y13/LSR2;X4Y13/LSR2/N272;1;X3Y16/N270;X3Y16/N270/N131;1;X3Y14/LSR0;X3Y14/LSR0/N272;1;X2Y16/W210;X2Y16/W210/W212;1;X1Y16/LSR1;X1Y16/LSR1/W211;1;X2Y14/LSR2;X2Y14/LSR2/N271;1;X2Y13/LSR1;X2Y13/LSR1/N272;1;X2Y13/LSR0;X2Y13/LSR0/N272;1;X2Y17/LSR1;X2Y17/LSR1/X07;1;X1Y14/LSR1;X1Y14/LSR1/N272;1;X2Y16/LSR0;X2Y16/LSR0/W212;1;X3Y17/N130;X3Y17/N130/N838;1;X3Y16/W270;X3Y16/W270/N131;1;X1Y16/N270;X1Y16/N270/W272;1;X1Y14/LSR0;X1Y14/LSR0/N272;1;X3Y14/LSR2;X3Y14/LSR2/N271;1;X2Y17/N260;X2Y17/N260/W262;1;X2Y15/N270;X2Y15/N270/N262;1;X2Y13/LSR2;X2Y13/LSR2/N272;1;X4Y14/LSR0;X4Y14/LSR0/N271;1;X4Y25/SN10;X4Y25/SN10/F6;1;X4Y24/N810;X4Y24/N810/N111;1;X4Y16/W210;X4Y16/W210/N818;1;X2Y16/LSR2;X2Y16/LSR2/W212;1;X3Y17/S210;X3Y17/S210/N818;1;X3Y19/W210;X3Y19/W210/S212;1;X1Y19/LSR0;X1Y19/LSR0/W212;1;X3Y17/X07;X3Y17/X07/W261;1;X3Y17/LSR2;X3Y17/LSR2/X07;1;X4Y17/N260;X4Y17/N260/N838;1;X4Y15/N270;X4Y15/N270/N262;1;X4Y13/LSR0;X4Y13/LSR0/N272;1;X4Y17/W260;X4Y17/W260/N838;1;X2Y17/X07;X2Y17/X07/W262;1;X2Y17/LSR2;X2Y17/LSR2/X07;1;X4Y25/W130;X4Y25/W130/F6;1;X3Y25/N830;X3Y25/N830/W131;1;X3Y17/N260;X3Y17/N260/N838;1;X3Y15/N270;X3Y15/N270/N262;1;X3Y13/LSR2;X3Y13/LSR2/N272;1;X4Y25/N830;X4Y25/N830/F6;1;X4Y21/W250;X4Y21/W250/N834;1;X2Y21/N250;X2Y21/N250/W252;1;X2Y19/X08;X2Y19/X08/N252;1;X2Y19/LSR0;X2Y19/LSR0/X08;1;X4Y25/F6;;1;X4Y25/EW10;X4Y25/EW10/F6;1;X3Y25/N810;X3Y25/N810/W111;1;X3Y17/W210;X3Y17/W210/N818;1;X1Y17/LSR2;X1Y17/LSR2/W212;1"
+          }
+        },
+        "btn1_sync0_DFFC_Q_D": {
+          "hide_name": 0,
+          "bits": [ 7576 ] ,
+          "attributes": {
+            "ROUTING": "X0Y4/F6;;1;X0Y4/SN20;X0Y4/SN20/F6;1;X0Y5/S820;X0Y5/S820/S121;1;X0Y13/E270;X0Y13/E270/S828;1;X2Y13/E220;X2Y13/E220/E272;1;X4Y13/D0;X4Y13/D0/E222;1"
+          }
+        },
+        "btn1": {
+          "hide_name": 0,
+          "bits": [ 7570 ] ,
+          "attributes": {
+            "ROUTING": " ",
+            "src": "d:\\FPGA\\Button\\counter2.v:4.16-4.20"
+          }
+        }
+      }
+    }
+  }
+}
